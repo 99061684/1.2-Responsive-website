@@ -1,4 +1,6 @@
 # Opdracht 
+### zie bestanden voor mijn uitwerking van de opdracht
+
 Rijschool flexi heeft website dat niet responsive is. Uit een analyse blijkt dat bezoekers de website van flexi vaak via hun telefoon opzoeken. De potentiele klanten die zich via de website melden zijn bezoekers die de website op een beeldscherm hebben bekeken. Om meer potentiele klanten binnen te halen via de website heeft rijschool flexi ervoor gekozen om de huidige website responsive te maken. De rijschool wilt ook een nieuwe website hebben. De opdracht is om een nieuwe website te maken voor de riijschool. Vanzelfsprekend dient deze responsive te zijn. In de bijlage zie je het ontwerp hoe de website zowel op een smartphone als op een beeldscherm eruit dient te zien.
 
 ## Functionele eisen:
@@ -20,3 +22,6 @@ Rijschool flexi heeft website dat niet responsive is. Uit een analyse blijkt dat
 * Je gebruikt px alleen waar de echt nodig is
 * De icoontjes komen van Font Awesome vandaan, ze zijn ook als afbeeldingen bijgevoegd in het project
 * Zet onderin de footer je eigen naam.
+
+
+### zie bestanden voor mijn uitwerking van de opdracht
