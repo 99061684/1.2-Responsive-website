@@ -122,7 +122,7 @@ footer p{
     margin-left: auto;
 }
 
-#rijschool_auto_image {
+#rijschool_auto_image, #rijschool_auto_div_pc {
     width: 100%;
 }
 
@@ -149,6 +149,29 @@ footer p{
     display: none;
 }
 
+@keyframes fade {
+    from {opacity: .7} 
+    to {opacity: 1}
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slide_balk {
+    height: 5px;
+    width: 25px;
+    margin: 0 2px;
+    background-color: #bbb;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: rgb(24, 23, 23);
+}
+
 /* ****** voor alleen telefoon ***** */
 @media only screen and (max-width: 320px) {
     .dropdown-content {
@@ -169,6 +192,18 @@ footer p{
         height: 190px;
     }
 
+    #rijschool_auto_div {
+        display: block;
+    }
+
+    .slideshow-container {
+        display: none;
+    }
+
+    #rijschool_auto_div_pc {
+        display: none;
+    }
+
     #gratis_proefles_button { 
         font-size: 2em;   
         width: 100%;
@@ -186,6 +221,13 @@ footer p{
         min-width: 160px;
     }  
 
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: relative;
+    }
+
     .text {
         width: 80%;
         margin: auto;
@@ -201,7 +243,7 @@ footer p{
 
     .text_deel>div>p{
         font-size: 1.5em;
-    } 
+    }
     
     #header1, #header2 {
         display: none;
@@ -240,10 +282,46 @@ footer p{
         color: grey;
         font-size: 1.2em;
         margin-left: 16px;
-    }  
+    }
 
-    #rijschool_auto_image {
-        height: 840px;
+    #rijschool_auto_div {
+        display: none;
+    }
+
+    /* #rijschool_auto_div_pc {
+        background-image: url(images/rijschool_auto_2.jpg), url(../images/rijschool_auto_2.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+        height: 60,909%;
+    } */
+
+    #mySlides {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #text_div_rijschool_auto p>span {
+        background-color: rgb(255, 196, 0);
+        text-align: center;
+    }
+
+    #text_div_rijschool_auto {
+        position: absolute;
+        top: 60%; 
+        left: 50%;
+        max-width: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 1;
+    }
+    
+    #text1 {
+        font-size: 3em;
+    }
+    #text2 {
+        font-size: 2em;
     }
 
     #gratis_proefles_button {    
@@ -281,5 +359,9 @@ footer p{
         margin-right: auto;
 
         font-size: 1.5em;
+    }
+
+    .slideshow-container {
+        display: none;
     }
 }

@@ -64,7 +64,63 @@
             <a href="#">CONTACT</a>
         </div>
 
-        <img id="rijschool_auto_image" src="images/rijschool_auto_2.jpg" alt="rijdende mensen in rijschool auto">
+        <div id="rijschool_auto_div">
+            <img id="rijschool_auto_image" src="images/rijschool_auto_2.jpg" alt="rijdende mensen in rijschool auto">
+        </div>
+
+        <!-- <div id="rijschool_auto_div_pc">
+            <img id="rijschool_auto_image" src="images/rijschool_auto_2.jpg" alt="rijdende mensen in rijschool auto">
+            <div id="text_div_rijschool_auto">
+                <p id="text1"><span>Een rijschool</span></p>
+                <p id="text2"><span>Die meer dan alleen maar een rijschool is!</span></p>  
+            </div>
+        </div> -->
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/rijschool_auto_2_332h.jpg" style="width:100%">
+                <div id="text_div_rijschool_auto">
+                    <p id="text1"><span>Een rijschool</span></p>
+                    <p id="text2"><span>Die meer dan alleen maar een rijschool is!</span></p>  
+                    <div style="text-align:center">
+                        <span class="slide_balk1 slide_balk"></span> 
+                        <span class="slide_balk2 slide_balk"></span> 
+                        <span class="slide_balk3 slide_balk"></span> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/rijschool_auto_3_332h.jpg" style="width:100%">
+                <div id="text_div_rijschool_auto">
+                    <p id="text1"><span>Je bent bij het goede adres</span></p>
+                    <p id="text2"><span>Wanneer het gaat om vertrouwen!</span></p> 
+                    <div style="text-align:center">
+                        <span class="slide_balk1 slide_balk"></span> 
+                        <span class="slide_balk2 slide_balk"></span> 
+                        <span class="slide_balk3 slide_balk"></span> 
+                    </div> 
+                </div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/rijschool_auto_4_332h.jpg" style="width:100%">
+                <div id="text_div_rijschool_auto">
+                    <p id="text1"><span>De beste leraren</span></p>
+                    <p id="text2"><span>Als het om rijden gaat!</span></p> 
+                    <div style="text-align:center">
+                        <span class="slide_balk1 slide_balk"></span> 
+                        <span class="slide_balk2 slide_balk"></span> 
+                        <span class="slide_balk3 slide_balk"></span> 
+                    </div> 
+                </div>
+            </div>
+            
+        </div>
 
         <div class="text">
             <div class="text_deel">
@@ -112,6 +168,33 @@
             <p>&#169; [Bas Verdoorn], 2020</p>
         </footer>
     </div>
+
+    <script>
+        const time_next_slide = 7; //aantal seconden
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          var slides = document.getElementsByClassName("mySlides");
+          var slide_balks = document.getElementsByClassName("slide_balk");
+          for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < slide_balks.length; i++) {
+            var slide_balks = document.getElementsByClassName("slide_balk");
+            slide_balks[i].className = slide_balks[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          var slide_balks = document.getElementsByClassName("slide_balk" + slideIndex);  
+          for (i = 0; i < slide_balks.length; i++) {
+            var slide_balks = document.getElementsByClassName("slide_balk" + slideIndex);
+            slide_balks[i].className += " active";
+          }
+          setTimeout(showSlides, (time_next_slide * 1000));
+        }
+    </script>
     
 </body>
 </html>
