@@ -138,13 +138,6 @@ footer p{
     font-size: 1.2em;
 }
 
-#video {
-    width: 100%;
-    height: 100%;
-
-    border: none;
-}
-
 #header1_pc, #header2_pc {
     display: none;
 }
@@ -170,6 +163,21 @@ footer p{
 
 .active {
     background-color: rgb(24, 23, 23);
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* ****** voor alleen telefoon ***** */
@@ -217,15 +225,14 @@ footer p{
         width: 100%;
     }
 
+    .dropdown .dropbtn svg {
+        vertical-align:baseline;
+        width: 1.2em;
+        height: 1.2em;
+    }
+
     .dropdown-content {
         min-width: 160px;
-    }  
-
-    .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: relative;
     }
 
     .text {
@@ -255,8 +262,17 @@ footer p{
     }
 
     #header1_pc {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        
         background-color: rgb(255, 196, 0);
         justify-content: flex-end;
+    }
+
+    #header2_pc {
+        margin-top: 3em;
     }
 
     #header1_pc>ul {
@@ -267,6 +283,13 @@ footer p{
     #header1_pc>ul>li {
         list-style: none;
         margin-right: 25px;
+        font-size: 1em;
+    }
+
+    #header1_pc svg{
+        vertical-align:baseline;
+        width: 1em;
+        height: 1em;
     }
 
     #logo {
@@ -287,14 +310,6 @@ footer p{
     #rijschool_auto_div {
         display: none;
     }
-
-    /* #rijschool_auto_div_pc {
-        background-image: url(images/rijschool_auto_2.jpg), url(../images/rijschool_auto_2.jpg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        display: block;
-        height: 60,909%;
-    } */
 
     #mySlides {
         position: relative;
@@ -334,17 +349,21 @@ footer p{
         font-size: 2em;
     }
 
-    #video {
-        position: relative;
+    .videoWrapper {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    /* #video {
+        border: none;
         left: 10%;
         right: 10%;
         width: 80%;
-        height: 400px;
-    }
+    } */
 }
 
 /* ****** styling voor alleen scherm tussen 650px en 1024px ***** */
-@media only screen and (min-width: 650px) and (max-width: 1024px) {
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
     #logo {
         width: 20%;
         order: 2;
